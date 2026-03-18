@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lower Light Leadership – Self-Mastery Companion</title>
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --line: #dbe3ef;
+      --accent: #1d4ed8;
+      --accent-2: #0f172a;
+      --success: #047857;
+      --danger: #b91c1c;
+      --radius: 14px;
+      --shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #eef3fc 0%, var(--bg) 25%);
+      line-height: 1.5;
+    }
+
+    .container {
+      width: min(1120px, 92vw);
+      margin: 28px auto 64px;
+    }
+
+    header {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 24px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.35rem, 3vw, 2rem);
+      letter-spacing: 0.2px;
+    }
+
+    .sub {
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    .instructions {
+      margin-top: 14px;
+      padding: 12px 14px;
+      border-left: 4px solid var(--accent);
+      background: #eff6ff;
+      border-radius: 8px;
+      color: #1e3a8a;
+      font-size: 0.95rem;
+    }
+
+    .top-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+    }
+
+    .card {
+      grid-column: span 12;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+
+    @media (min-width: 900px) {
+      .span-6 { grid-column: span 6; }
+      .span-4 { grid-column: span 4; }
+      .span-8 { grid-column: span 8; }
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 1.08rem;
+      color: var(--accent-2);
+    }
+
+    label {
+      display: block;
+      font-size: 0.9rem;
+      color: #334155;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    input[type="text"], textarea {
+      width: 100%;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      padding: 10px 11px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      color: var(--text);
+      background: #fff;
+      margin-bottom: 10px;
+    }
+
+    textarea { min-height: 74px; resize: vertical; }
+
+    .btn {
+      border: 1px solid transparent;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 10px;
+      padding: 9px 12px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn.secondary {
+      background: #fff;
+      color: #1e293b;
+      border-color: #cbd5e1;
+    }
+
+    .btn.danger { background: var(--danger); }
+
+    .btn + .btn { margin-left: 7px; }
+
+    .output {
+      border: 1px dashed #bfdbfe;
+      background: #f8fbff;
+      padding: 10px 12px;
+      border-radius: 10px;
+      min-height: 48px;
+      white-space: pre-wrap;
+    }
+
+    .muted { color: var(--muted); font-size: 0.9rem; }
+
+    .row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+
+    .dashboard-stat {
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      margin-top: 8px;
+      background: #fcfdff;
+    }
+
+    .pill {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      background: #dbeafe;
+      color: #1e40af;
+      border-radius: 999px;
+      padding: 4px 8px;
+      margin-bottom: 7px;
+    }
+
+    .streak {
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: var(--success);
+    }
+
+    .footer-note {
+      text-align: center;
+      color: var(--muted);
+      margin-top: 20px;
+      font-size: 0.86rem;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    Lower Light Leadership – Self-Mastery Companion
+    How to use:
+    1) Open this file in your browser.
+    2) Fill sections from top to bottom during your coaching routine.
+    3) Click each Generate/Save button to store progress in localStorage.
+    4) Use Copy for quick sharing, Print for a hard copy, and Reset to start over.
+  -->
+
+  <div class="container">
+    <header>
+      <h1>Lower Light Leadership – Self-Mastery Companion</h1>
+      <div class="sub">A structured daily coaching system for leadership growth and self-mastery.</div>
+      <div class="instructions">
+        <strong>Simple instructions:</strong> Complete each section, click the section action button, and your data is saved automatically in this browser. Use <strong>Copy</strong> buttons to export text, <strong>Print</strong> for a coaching worksheet, and <strong>Reset Data</strong> only when you want a fresh start.
+      </div>
+      <div class="top-actions">
+        <button class="btn secondary" id="printBtn">Print</button>
+        <button class="btn danger" id="resetBtn">Reset Data</button>
+      </div>
+    </header>
+
+    <div class="grid">
+      <section class="card span-6" id="dashboard">
+        <h2>1) Dashboard</h2>
+        <div class="dashboard-stat">
+          <div class="pill">Current Weekly Focus</div>
+          <div id="dashWeekly" class="output"></div>
+        </div>
+        <div class="dashboard-stat">
+          <div class="pill">Last Reflection Entry</div>
+          <div id="dashReflection" class="output"></div>
+        </div>
+      </section>
+
+      <section class="card span-6" id="identityVision">
+        <h2>2) Identity &amp; Vision Builder</h2>
+        <label for="identityBecome">Who do you want to become?</label>
+        <textarea id="identityBecome"></textarea>
+        <label for="identityValues">What values guide you?</label>
+        <textarea id="identityValues"></textarea>
+        <label for="identityImpact">What impact do you want to have?</label>
+        <textarea id="identityImpact"></textarea>
+        <div class="row">
+          <button class="btn" id="buildIdentityBtn">Build Identity Direction</button>
+          <button class="btn secondary" data-copy="identityOutput">Copy</button>
+        </div>
+        <p class="muted">Identity Direction</p>
+        <div class="output" id="identityOutput"></div>
+      </section>
+
+      <section class="card span-6" id="dailyFocus">
+        <h2>3) Daily Focus System</h2>
+        <label for="weeklyBehavior">This week’s behavior</label>
+        <input id="weeklyBehavior" type="text" placeholder="Example: Start difficult conversations early" />
+        <label>Today’s Focus</label>
+        <div class="output" id="todayFocus"></div>
+        <label><input id="focusDone" type="checkbox" /> Completed today</label>
+        <div class="row">
+          <button class="btn" id="saveDailyFocusBtn">Save Focus</button>
+          <button class="btn secondary" data-copy="todayFocus">Copy</button>
+        </div>
+      </section>
+
+      <section class="card span-6" id="cuesBuilder">
+        <h2>4) Relevant Cues Builder</h2>
+        <label for="cueChallenge">Current challenge</label>
+        <textarea id="cueChallenge"></textarea>
+        <div class="row">
+          <button class="btn" id="buildCuesBtn">Generate 3 Cues</button>
+          <button class="btn secondary" data-copy="cueOutput">Copy</button>
+        </div>
+        <div class="output" id="cueOutput"></div>
+      </section>
+
+      <section class="card span-6" id="imageryPlanner">
+        <h2>5) Mental Imagery Planner</h2>
+        <label for="idealPerformance">Ideal performance</label>
+        <textarea id="idealPerformance"></textarea>
+        <label for="likelyChallenge">Likely challenge</label>
+        <textarea id="likelyChallenge"></textarea>
+        <label for="recoveryResponse">Recovery response</label>
+        <textarea id="recoveryResponse"></textarea>
+        <div class="row">
+          <button class="btn" id="buildImageryBtn">Build Plan</button>
+          <button class="btn secondary" data-copy="imageryOutput">Copy</button>
+        </div>
+        <div class="output" id="imageryOutput"></div>
+      </section>
+
+      <section class="card span-6" id="controllables">
+        <h2>6) Control the Controllables</h2>
+        <label for="controlChallenge">Challenge</label>
+        <textarea id="controlChallenge"></textarea>
+        <div class="row">
+          <button class="btn" id="buildControlBtn">Build Clarity</button>
+          <button class="btn secondary" data-copy="controlOutput">Copy</button>
+        </div>
+        <div class="output" id="controlOutput"></div>
+      </section>
+
+      <section class="card span-6" id="selfTalk">
+        <h2>7) Self-Talk Reframe Tool</h2>
+        <label for="negativeThought">Negative thought</label>
+        <textarea id="negativeThought"></textarea>
+        <div class="row">
+          <button class="btn" id="buildReframeBtn">Reframe Thought</button>
+          <button class="btn secondary" data-copy="reframeOutput">Copy</button>
+        </div>
+        <div class="output" id="reframeOutput"></div>
+      </section>
+
+      <section class="card span-6" id="powerStatement">
+        <h2>8) Power Statement Builder</h2>
+        <label for="doubtInput">Current doubt</label>
+        <textarea id="doubtInput"></textarea>
+        <div class="row">
+          <button class="btn" id="buildPowerBtn">Build Statement</button>
+          <button class="btn secondary" data-copy="powerOutput">Copy</button>
+        </div>
+        <div class="output" id="powerOutput"></div>
+      </section>
+
+      <section class="card span-8" id="reflection">
+        <h2>9) Daily Reflection</h2>
+        <label for="winInput">Win</label>
+        <textarea id="winInput"></textarea>
+        <label for="challengeInput">Challenge</label>
+        <textarea id="challengeInput"></textarea>
+        <label for="lessonInput">Lesson</label>
+        <textarea id="lessonInput"></textarea>
+        <label for="tomorrowFocusInput">Tomorrow’s focus</label>
+        <textarea id="tomorrowFocusInput"></textarea>
+        <div class="row">
+          <button class="btn" id="saveReflectionBtn">Save Reflection</button>
+          <button class="btn secondary" data-copy="recentReflection">Copy</button>
+        </div>
+      </section>
+
+      <section class="card span-4" id="compareTracker">
+        <h2>10) Compete vs Compare Tracker</h2>
+        <label for="improveInput">What did you improve today?</label>
+        <textarea id="improveInput"></textarea>
+        <div class="row">
+          <button class="btn" id="logImproveBtn">Log Improvement</button>
+        </div>
+        <p class="muted">Current streak</p>
+        <div class="streak" id="streakCount">0 days</div>
+        <div class="output" id="lastImprove"></div>
+      </section>
+
+      <section class="card span-12">
+        <h2>Most Recent Reflection</h2>
+        <div id="recentReflection" class="output"></div>
+      </section>
+    </div>
+
+    <div class="footer-note">Built as a practical coaching companion for daily leadership execution.</div>
+  </div>
+
+  <script>
+    // ========== Storage Utility ==========
+    const STORAGE_KEY = "lll_self_mastery_companion_v1";
+    const $ = (id) => document.getElementById(id);
+
+    function loadState() {
+      try {
+        return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {
+          dailyFocus: {},
+          reflection: null,
+          streak: { count: 0, lastDate: null, lastEntry: "" }
+        };
+      } catch {
+        return { dailyFocus: {}, reflection: null, streak: { count: 0, lastDate: null, lastEntry: "" } };
+      }
+    }
+
+    function saveState() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      renderDashboard();
+      renderStreak();
+    }
+
+    const state = loadState();
+
+    function todayISO() {
+      const d = new Date();
+      return d.toISOString().slice(0, 10);
+    }
+
+    // ========== Renderers ==========
+    function renderDashboard() {
+      $("dashWeekly").textContent = state.dailyFocus.weeklyBehavior || "No weekly behavior set yet.";
+
+      if (!state.reflection) {
+        $("dashReflection").textContent = "No reflection entry yet.";
+      } else {
+        const r = state.reflection;
+        $("dashReflection").textContent = `${r.date}: Win - ${r.win || "N/A"}; Challenge - ${r.challenge || "N/A"}; Lesson - ${r.lesson || "N/A"}; Tomorrow - ${r.tomorrow || "N/A"}`;
+      }
+
+      if (state.reflection) {
+        const r = state.reflection;
+        $("recentReflection").textContent = `Date: ${r.date}\nWin: ${r.win}\nChallenge: ${r.challenge}\nLesson: ${r.lesson}\nTomorrow's Focus: ${r.tomorrow}`;
+      } else {
+        $("recentReflection").textContent = "No reflections saved yet.";
+      }
+    }
+
+    function renderStreak() {
+      const s = state.streak;
+      $("streakCount").textContent = `${s.count || 0} day${(s.count || 0) === 1 ? "" : "s"}`;
+      $("lastImprove").textContent = s.lastEntry ? `${s.lastDate}: ${s.lastEntry}` : "No improvement logged yet.";
+    }
+
+    // ========== Feature Logic ==========
+    function buildIdentityDirection() {
+      const become = $("identityBecome").value.trim();
+      const values = $("identityValues").value.trim();
+      const impact = $("identityImpact").value.trim();
+      const out = `I am becoming ${become || "a disciplined and intentional leader"}, guided by ${values || "clarity, integrity, and courage"}. I aim to create impact through ${impact || "consistent service, decisive action, and positive influence"}.`;
+      $("identityOutput").textContent = out;
+      state.identity = { become, values, impact, out };
+      saveState();
+    }
+
+    function saveDailyFocus() {
+      const weeklyBehavior = $("weeklyBehavior").value.trim();
+      const completed = $("focusDone").checked;
+      const out = `Today, execute this behavior: ${weeklyBehavior || "Define one weekly behavior."} ${completed ? "(Completed today)" : "(Pending today)"}`;
+      $("todayFocus").textContent = out;
+      state.dailyFocus = { weeklyBehavior, completed, date: todayISO(), out };
+      saveState();
+    }
+
+    function buildCues() {
+      const c = $("cueChallenge").value.trim();
+      const cue1 = `Pause. Breathe. Prioritize.`;
+      const cue2 = `Lead with values, not emotion.`;
+      const cue3 = `One clear action now.`;
+      const out = `Challenge: ${c || "N/A"}\n1) ${cue1}\n2) ${cue2}\n3) ${cue3}`;
+      $("cueOutput").textContent = out;
+      state.cues = { challenge: c, out };
+      saveState();
+    }
+
+    function buildImageryPlan() {
+      const ideal = $("idealPerformance").value.trim();
+      const challenge = $("likelyChallenge").value.trim();
+      const recovery = $("recoveryResponse").value.trim();
+      const out = `Mental Imagery Plan\n- Visualize Ideal Performance: ${ideal || "N/A"}\n- Anticipate Likely Challenge: ${challenge || "N/A"}\n- Rehearse Recovery Response: ${recovery || "N/A"}`;
+      $("imageryOutput").textContent = out;
+      state.imagery = { ideal, challenge, recovery, out };
+      saveState();
+    }
+
+    function buildControllables() {
+      const ch = $("controlChallenge").value.trim();
+      const out = `Challenge: ${ch || "N/A"}\nNot in my control: Others' opinions, timing, and external outcomes.\nIn my control: Preparation, attitude, communication quality, and effort.\nOne action today: Take the next high-leverage step within 15 minutes.`;
+      $("controlOutput").textContent = out;
+      state.control = { ch, out };
+      saveState();
+    }
+
+    function buildReframe() {
+      const neg = $("negativeThought").value.trim();
+      const out = `1) Acknowledge reality: ${neg || "This is difficult."}\n2) Diagnose why: This reaction comes from pressure and fear of falling short.\n3) Reframe with truth: ...but I can respond deliberately, learn quickly, and improve this rep.`;
+      $("reframeOutput").textContent = out;
+      state.reframe = { neg, out };
+      saveState();
+    }
+
+    function buildPowerStatement() {
+      const doubt = $("doubtInput").value.trim();
+      const out = `Even when I feel "${doubt || "uncertain"}", I choose disciplined action, clear standards, and courageous leadership. I can do hard things with consistency.`;
+      $("powerOutput").textContent = out;
+      state.power = { doubt, out };
+      saveState();
+    }
+
+    function saveReflection() {
+      const reflection = {
+        date: todayISO(),
+        win: $("winInput").value.trim(),
+        challenge: $("challengeInput").value.trim(),
+        lesson: $("lessonInput").value.trim(),
+        tomorrow: $("tomorrowFocusInput").value.trim()
+      };
+      state.reflection = reflection;
+      saveState();
+      renderDashboard();
+    }
+
+    function logImprovement() {
+      const entry = $("improveInput").value.trim();
+      const today = todayISO();
+      const s = state.streak || { count: 0, lastDate: null, lastEntry: "" };
+
+      if (!entry) return;
+
+      if (s.lastDate === today) {
+        s.lastEntry = entry;
+      } else {
+        if (s.lastDate) {
+          const prev = new Date(s.lastDate + "T00:00:00Z");
+          const curr = new Date(today + "T00:00:00Z");
+          const days = Math.round((curr - prev) / 86400000);
+          s.count = (days === 1) ? s.count + 1 : 1;
+        } else {
+          s.count = 1;
+        }
+        s.lastDate = today;
+        s.lastEntry = entry;
+      }
+
+      state.streak = s;
+      saveState();
+      $("improveInput").value = "";
+    }
+
+    // ========== Helpers ==========
+    function copyFrom(elementId) {
+      const text = $(elementId).innerText || $(elementId).textContent || "";
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Copied to clipboard.");
+      });
+    }
+
+    function resetAllData() {
+      if (!confirm("Reset all saved coaching data?")) return;
+      localStorage.removeItem(STORAGE_KEY);
+      location.reload();
+    }
+
+    function hydrate() {
+      if (state.identity) {
+        $("identityBecome").value = state.identity.become || "";
+        $("identityValues").value = state.identity.values || "";
+        $("identityImpact").value = state.identity.impact || "";
+        $("identityOutput").textContent = state.identity.out || "";
+      }
+      if (state.dailyFocus) {
+        $("weeklyBehavior").value = state.dailyFocus.weeklyBehavior || "";
+        $("focusDone").checked = !!state.dailyFocus.completed;
+        $("todayFocus").textContent = state.dailyFocus.out || "No daily focus saved yet.";
+      }
+      if (state.cues) $("cueOutput").textContent = state.cues.out || "";
+      if (state.imagery) $("imageryOutput").textContent = state.imagery.out || "";
+      if (state.control) $("controlOutput").textContent = state.control.out || "";
+      if (state.reframe) $("reframeOutput").textContent = state.reframe.out || "";
+      if (state.power) $("powerOutput").textContent = state.power.out || "";
+
+      renderDashboard();
+      renderStreak();
+    }
+
+    // ========== Event Wiring ==========
+    $("buildIdentityBtn").addEventListener("click", buildIdentityDirection);
+    $("saveDailyFocusBtn").addEventListener("click", saveDailyFocus);
+    $("buildCuesBtn").addEventListener("click", buildCues);
+    $("buildImageryBtn").addEventListener("click", buildImageryPlan);
+    $("buildControlBtn").addEventListener("click", buildControllables);
+    $("buildReframeBtn").addEventListener("click", buildReframe);
+    $("buildPowerBtn").addEventListener("click", buildPowerStatement);
+    $("saveReflectionBtn").addEventListener("click", saveReflection);
+    $("logImproveBtn").addEventListener("click", logImprovement);
+    $("resetBtn").addEventListener("click", resetAllData);
+    $("printBtn").addEventListener("click", () => window.print());
+
+    document.querySelectorAll("[data-copy]").forEach(btn => {
+      btn.addEventListener("click", () => copyFrom(btn.dataset.copy));
+    });
+
+    // Start app
+    hydrate();
+  </script>
+</body>
+</html>
